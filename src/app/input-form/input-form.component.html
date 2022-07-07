@@ -1,0 +1,14 @@
+
+<form [formGroup]="addPerson" >
+  <div>
+    <input type="first-name" formControlName="firstName" placeholder="FirstName" />
+  </div>
+  <div>
+    <input type="last-name" formControlName="lastName"  placeholder="LastName"/>
+  </div>
+  <button (click)="addName(addPerson.value)">Add Person</button>
+</form>
+
+<ul *ngFor="let item of list">
+<li>{{item.name.firstName}}  {{item.name.lastName}} <button (click)="removeName(item.id)">Remove</button></li>
+</ul>
